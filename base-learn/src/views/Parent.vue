@@ -3,7 +3,7 @@
   <div>
     <h1>Parent</h1>
     <h3>{{ msg }}</h3>
-    <Child v-bind:msg = "'from parent msg'"  @showMsg="ChildMsg" ref="child"></Child>
+    <Child v-bind:msg = "'from parent msg'"  @showMsg="ChildMsg" ref="child" v-bind="$attrs"></Child>
   </div>
 </template>
 

@@ -1,8 +1,13 @@
 <template>
   <div id="app">
-    <button @click="passMessage">非父子组件传值</button>
+    <h1>This is App</h1>
+<!--    <button @click="passMessage">非父子组件传值</button>-->
+<!--    <hr>-->
+<!--    <Parent :msga="msga" :msgb="msgb" :msgc="msgc"></Parent>-->
+    <router-link to="/home">Home</router-link>
     <hr>
-    <Parent></Parent>
+    <button @click="toHome">toHome</button>
+    <router-view></router-view>
   </div>
 </template>
 <script>
@@ -15,6 +20,16 @@
     methods: {
       passMessage() {
         bus.$emit('Message','i am 非父子组件传值')
+      },
+      toHome() {
+        this.$router.push('/home')
+      }
+    },
+    data() {
+      return {
+        msga: 'msga',
+        msgb: 'msgb',
+        msgc: 'msgc',
       }
     },
   }

@@ -30,6 +30,8 @@ export default {
     }
   },
   mounted() {
+
+    console.log('attrs',this.$attrs)
     console.log(this.$parent)
     bus.$on('Message',(value)=>{
       console.log(value)
