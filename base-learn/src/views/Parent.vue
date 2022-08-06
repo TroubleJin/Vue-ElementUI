@@ -4,6 +4,7 @@
     <h1>Parent</h1>
     <h3>{{ msg }}</h3>
     <h5> vuex {{ count }}</h5>
+    <h5> getters {{ doubleCount }}</h5>
     <button @click="add"> 增加</button>
     <Child v-bind:msg = "'from parent msg'"  @showMsg="ChildMsg" ref="child" v-bind="$attrs"></Child>
   </div>
@@ -11,11 +12,16 @@
 
 <script>
 import Child from './Child'
-import {mapState} from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 export default {
-  computed: mapState({
-    count: 'count'
-  }),
+  computed: {
+    ...mapState({
+      count: 'count',
+    }),
+    ...mapGetters([
+        'doubleCount'
+    ])
+  },
   data () {
     return {
       msg: ''
