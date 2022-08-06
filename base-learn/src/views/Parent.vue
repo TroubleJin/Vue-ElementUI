@@ -18,9 +18,9 @@ export default {
     ...mapState({
       count: 'count',
     }),
-    ...mapGetters([
-        'doubleCount'
-    ])
+    doubleCount(state) {
+      return this.$store.getters.doubleCount;
+    },
   },
   data () {
     return {
