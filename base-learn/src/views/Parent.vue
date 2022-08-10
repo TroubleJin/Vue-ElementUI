@@ -18,8 +18,9 @@ export default {
     ...mapState({
       count: 'count',
     }),
-    doubleCount(state) {
-      return this.$store.getters.doubleCount;
+    doubleCount() {
+      // return this.$store.getters.doubleCount;
+      return this.count * 2;
     },
   },
   data () {

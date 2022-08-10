@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <h1>This is App</h1>
-<!--    <button @click="passMessage">非父子组件传值</button>-->
+<!--    <h1>This is App</h1>-->
+<!--&lt;!&ndash;    <button @click="passMessage">非父子组件传值</button>&ndash;&gt;-->
+<!--&lt;!&ndash;    <hr>&ndash;&gt;-->
+<!--&lt;!&ndash;    <Parent :msga="msga" :msgb="msgb" :msgc="msgc"></Parent>&ndash;&gt;-->
+<!--&lt;!&ndash;    <router-link to="/home">Home</router-link>&ndash;&gt;-->
 <!--    <hr>-->
-<!--    <Parent :msga="msga" :msgb="msgb" :msgc="msgc"></Parent>-->
-<!--    <router-link to="/home">Home</router-link>-->
-    <hr>
-    <button @click="toHome">toHome</button>
+<!--    <button @click="toHome">toHome</button>-->
     <router-view></router-view>
   </div>
 </template>
